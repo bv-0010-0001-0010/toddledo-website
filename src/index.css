@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  :root {
+    --background: 260 100% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 260 100% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 260 100% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+  }
+} */
+
+@layer base {
+  :root {
+     /* Toddledo light blue theme */
+    --background: 214 100% 96%;          /* #eef6ff */
+    --foreground: 222 47% 11%;           /* dark text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 219 63% 32%;              /* #1b3778 main Toddledo blue */
+    --primary-foreground: 210 40% 98%;   /* near white */
+
+    --secondary: 213 100% 94%;           /* soft light blue */
+    --secondary-foreground: 219 63% 32%;
+
+    --muted: 213 40% 92%;
+    --muted-foreground: 222 10% 40%;
+
+    --accent: 205 89% 70%;               /* friendly accent (blue-teal) */
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 40% 86%;
+    --input: 213 40% 86%;
+    --ring: 219 63% 40%;
+
+    --radius: 0.75rem;
+
+
+
+
+    /* Toddledo brand palette (hex tokens) */
+    --color-brand-50:  #eef6ff;
+    --color-brand-100: #d9ebff;
+    --color-brand-200: #b7d6ff;
+    --color-brand-300: #8fbaff;
+    --color-brand-400: #5f95ff;
+    --color-brand-500: #3b7bff;
+    --color-brand-600: #2f65d6;
+    --color-brand-700: #264fb0;
+    --color-brand-800: #1f408f;
+    --color-brand-900: #1b3778;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body, html {
+    @apply bg-background text-foreground;
+    cursor: none;
+  }
+  
+  a, button {
+    cursor: none;
+  }
+}
+
+/* For Webkit-based browsers (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* .text-gradient {
+  background: linear-gradient(90deg, #D4B4FF, #9372FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6, #1b3778);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Default: normal cursor everywhere */
+body, html, a, button {
+  cursor: auto;
+}
+
+/* Only hide cursor when the device supports hover and fine pointer (mouse/trackpad) */
+@media (hover: hover) and (pointer: fine) {
+  body, html, a, button {
+    cursor: none;
+  }
+}
+
+
+/* Prevent fixed header from covering anchor targets */
+section[id] { scroll-margin-top: 96px; }   /* tweak if your header is taller */
+
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Safari/Chrome */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }

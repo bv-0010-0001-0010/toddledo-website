@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
@@ -20,7 +21,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 sm:pb-20">
       <AnimatedHeroBackground />
 
       {/* Dark-to-light overlay with a softer bottom fade */}
@@ -99,26 +100,32 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.26 }}
             className="mt-6 flex justify-center"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-slate-100 px-6 py-4 md:px-8 md:py-5 rounded-2xl bg-slate-900/55 border border-white/15 backdrop-blur-md max-w-3xl w-full">
-              <div>
+            <div className="w-full max-w-3xl overflow-hidden rounded-2xl bg-slate-900/55 border border-white/15 backdrop-blur-md
+              grid grid-cols-1 min-[520px]:grid-cols-3
+              divide-y divide-white/10 min-[520px]:divide-y-0 min-[520px]:divide-x"
+            >
+              <div className="px-6 py-5 md:px-8 md:py-6 text-center min-[520px]:text-left">
                 <p className="text-lg font-semibold text-white">8+ hours</p>
                 <p className="text-xs sm:text-sm text-slate-200/85">
                   admin saved per week for centre managers on average.
                 </p>
               </div>
-              <div>
+
+              <div className="px-6 py-5 md:px-8 md:py-6 text-center min-[520px]:text-left">
                 <p className="text-lg font-semibold text-white">Real-time</p>
                 <p className="text-xs sm:text-sm text-slate-200/85">
                   updates for parents with a dedicated parent app.
                 </p>
               </div>
-              <div>
+
+              <div className="px-6 py-5 md:px-8 md:py-6 text-center min-[520px]:text-left">
                 <p className="text-lg font-semibold text-white">APAC-ready</p>
                 <p className="text-xs sm:text-sm text-slate-200/85">
                   designed for Australian and New Zealand compliance first.
                 </p>
               </div>
             </div>
+
           </motion.div>
         </div>
       </div>
